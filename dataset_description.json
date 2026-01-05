@@ -1,18 +1,19 @@
 {
-  "Name": "Cognitive Workload 5-level n-back",
-  "BIDSVersion": "1.9.0",
-  "DatasetType": "raw",
-  "Authors": [
-    "Liam Booth",
-    "Matthew Barras"
-  ],
-  "License": "CC0",
-  "GeneratedBy": [
-    {
-      "Name": "Custom XDF to BIDS conversion",
-      "Version": "1.0",
-      "Description": "Converted XDF to BrainVision and BIDS using repository scripts."
-    }
-  ],
-  "SourceDatasets": []
+    "Name": "Cognitive Workload 5-level n-back",
+    "BIDSVersion": "1.9.0",
+    "DatasetType": "raw",
+    "Authors": [
+        "Liam Booth",
+        "Matthew Barras"
+    ],
+    "License": "CC0",
+    "GeneratedBy": [
+        {
+            "Name": "Custom XDF to BIDS conversion",
+            "Version": "1.0",
+            "Description": "Converted XDF to BrainVision and BIDS using repository scripts."
+        }
+    ],
+    "SourceDatasets": [],
+    "DatasetDOI": "doi:10.18112/openneuro.ds007169.v1.0.0"
 }
