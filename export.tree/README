@@ -1,0 +1,39 @@
+﻿This dataset was generated from LSL/XDF recordings.
+
+- Original recordings are stored under sourcedata/xdf/ as .xdf files (non-BIDS).
+- EEG was converted to BrainVision format (.vhdr/.eeg/.vmrk) under each sub-*/eeg/.
+- *_events.tsv was generated from marker streams and then aligned so onset is relative to the EEG start time.
+- Marker streams include task markers (n-backMarkers) and acquisition dropout annotations (UoHDataOffsetStream); events include a marker_stream column and marker definitions are in task-nback_events.json.
+- Pupil Labs gaze/pupil data was exported from the XDF pupil_capture stream into sub-*/eeg/ as BIDS physio files (*_recording-pupil_physio.tsv.gz + *_recording-pupil_physio.json).
+- ML analysis note: participants excluded from the ML analysis are not included in this dataset; all participants listed were included. Any epoch rejection used in the analysis (e.g., >4.2% missing samples) is not applied to this raw dataset.
+- Participant IDs were re-assigned and randomized within this dataset.
+
+Participants
+- N_recorded: 20
+- N_released: 18
+- Exclusions: 2 participants excluded due to multi-modal acquisition failures. IDs were re-assigned to sub-001..sub-018 with no linkage retained.
+
+Hardware and data collection
+- Combined EEG+ECG mobile EEG system (Bateson and Asghar, 2021; Clewett et al., 2016) and Pupil Labs Pupil Core, synchronized via Lab Streaming Layer (LSL).
+- EEG: 19-channel 10-20 montage (Fp1, Fp2, F7, F3, Fz, F4, F8, T3, C3, Cz, C4, T4, T5, P3, Pz, P4, T6, O1, O2), Ag/AgCl electrodes with linked-ear reference, 250 Hz; impedances checked and Neurgel EEG gel applied.
+- ECG: 3-lead on the same system; positive lead right shoulder/clavicle, negative lead left shoulder/clavicle, feedback lead lower left torso.
+- Pupillometry: Pupil Labs Pupil Core eye tracking with infrared illuminators; LSL relay with asynchronous sampling (timestamps per sample).
+
+Protocol summary
+- N-back task with difficulty levels 1-back through 4-back; difficulty increased from easiest to hardest.
+- Task events encode n-back level in `trial_type` (nback_1..nback_4) and `nback_n`, with start/finish markers for task and tutorial phases.
+
+Task: nback
+
+Release notes
+- Recorded 20 participants; released 18.
+- Reason: multi-modal acquisition QC failure.
+- Participant IDs re-assigned to sub-001..sub-018; no linkage retained.
+
+
+References
+----------
+Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896).https://doi.org/10.21105/joss.01896
+
+Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103.https://doi.org/10.1038/s41597-019-0104-8
+

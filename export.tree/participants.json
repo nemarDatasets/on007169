@@ -1,0 +1,18 @@
+{
+  "participant_id": {
+    "Description": "Unique participant identifier."
+  },
+  "analysis_included": {
+    "Description": "Whether this participant was included in the authors' ML analysis.",
+    "Levels": {
+      "true": "Included.",
+      "false": "Excluded."
+    }
+  },
+  "data_quality_overall": {
+    "Description": "Overall data-quality assessment for the released dataset.",
+    "Levels": {
+      "pass": "Passed release QC."
+    }
+  }
+}
