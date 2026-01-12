@@ -1,4 +1,2 @@
-sub-0[0-1][0-9]/pupil/
-sub-0[0-1][0-9]/ecg/
-sub-020/pupil/
-sub-020/ecg/
+/sub-*/ecg/**
+/sub-*/pupil/**
