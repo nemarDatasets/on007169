@@ -1,3 +1,0 @@
-# Ignore eye-tracking outputs (extension not validated by current validator build)
-sub-*/eyetrack/
-sub-*/eyetrack/**
