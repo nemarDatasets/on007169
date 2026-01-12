@@ -14,5 +14,8 @@
             "Description": "Converted XDF to BrainVision and BIDS using repository scripts."
         }
     ],
-    "SourceDatasets": []
+    "SourceDatasets": [],
+    "Funding": [
+        "The University of Hull"
+    ]
 }
