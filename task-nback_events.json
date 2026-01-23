@@ -1,10 +1,64 @@
 {
-  "timestamp_lsl": {
-    "Description": "Original LSL timestamp for the marker event."
-  },
   "StimulusPresentation": {},
-  "nback_n": {
-    "Description": "n-back level (when applicable)."
+  "marker_stream": {
+    "Description": "LSL marker stream name that generated this event.",
+    "Levels": {
+      "UoHDataOffsetStream": "Marker stream reporting dropped sample counts (e.g., 'Dropped N samples').",
+      "n-backMarkers": "Task marker stream for the n-back paradigm."
+    }
+  },
+  "trial_type": {
+    "Description": "Event type / condition label.",
+    "Levels": {
+      "1-back": "N-back trial with nback_level=1.",
+      "2-back": "N-back trial with nback_level=2.",
+      "3-back": "N-back trial with nback_level=3.",
+      "4-back": "N-back trial with nback_level=4.",
+      "dropped_samples": "Dropout annotation from acquisition (dropped samples).",
+      "finished_n_back": "Task marker.",
+      "finished_tutorial_n_back": "Task marker.",
+      "started_n_back": "Task marker.",
+      "started_tutorial_n_back": "Task marker."
+    }
+  },
+  "timestamp_lsl": {
+    "Description": "Original LSL timestamp for this marker.",
+    "Units": "s"
+  },
+  "marker": {
+    "Description": "Raw marker string emitted on the LSL marker stream."
+  },
+  "nback_level": {
+    "Description": "N-back level (1-4) when applicable."
+  },
+  "key_press": {
+    "Description": "Whether a response key was pressed on this trial.",
+    "Levels": {
+      "true": "Key pressed.",
+      "false": "No key press.",
+      "True": "Key pressed.",
+      "False": "No key press."
+    }
+  },
+  "matched": {
+    "Description": "Whether the stimulus matched the N-back target on this trial.",
+    "Levels": {
+      "true": "Stimulus matched.",
+      "false": "No match.",
+      "True": "Stimulus matched.",
+      "False": "No match."
+    }
+  },
+  "dropped_samples": {
+    "Description": "Number of dropped samples reported by the dropout stream.",
+    "Units": "samples"
+  },
+  "response_accuracy": {
+    "Description": "1=correct, 0=incorrect (when applicable).",
+    "Levels": {
+      "1": "Correct response.",
+      "0": "Incorrect response."
+    }
   },
   "istutorial": {
     "Description": "Whether this trial was marked as tutorial (when applicable).",
@@ -15,66 +69,11 @@
       "false": "Non-tutorial."
     }
   },
-  "marker": {
-    "Description": "Raw marker string."
-  },
-  "matched": {
-    "Description": "Whether the current item matched n-back target (when applicable).",
-    "Levels": {
-      "True": "Matched.",
-      "False": "Not matched.",
-      "true": "Matched.",
-      "false": "Not matched."
-    }
-  },
   "outcome": {
     "Description": "Correct/Wrong (when applicable).",
     "Levels": {
       "Correct": "Correct.",
       "Wrong": "Wrong."
-    }
-  },
-  "keypress": {
-    "Description": "Whether the response key was pressed (when applicable).",
-    "Levels": {
-      "True": "Key pressed.",
-      "False": "No key press.",
-      "true": "Key pressed.",
-      "false": "No key press."
-    }
-  },
-  "difficulty_range": {
-    "Description": "Arithmetic range label (when applicable)."
-  },
-  "trial_type": {
-    "Description": "Event type / condition label.",
-    "Levels": {
-      "dropped_samples": "Dropout annotation from acquisition (dropped samples).",
-      "finished_n-back": "Task boundary marker (finish).",
-      "finished_tutorial_n-back": "Task boundary marker (finish).",
-      "nback_1": "n-back stimulus presentation at level 1.",
-      "nback_2": "n-back stimulus presentation at level 2.",
-      "nback_3": "n-back stimulus presentation at level 3.",
-      "nback_4": "n-back stimulus presentation at level 4.",
-      "started_n-back": "Task boundary marker (start).",
-      "started_tutorial_n-back": "Task boundary marker (start)."
-    }
-  },
-  "response_accuracy": {
-    "Description": "1=correct, 0=incorrect (when applicable).",
-    "Levels": {
-      "1": "Correct response.",
-      "0": "Incorrect response."
-    }
-  },
-  "dropped_samples": {
-    "Description": "Number of dropped samples reported by acquisition stream marker ('Dropped N')."
-  },
-  "marker_stream": {
-    "Description": "LSL marker stream name that generated this event.",
-    "Levels": {
-      "UoHDataOffsetStream": "Marker stream reporting dropped sample counts (e.g., 'Dropped N samples').",
-      "n-backMarkers": "Task marker stream for the n-back paradigm."
     }
   }
 }
