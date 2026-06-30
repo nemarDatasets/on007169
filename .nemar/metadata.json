@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Multimodal Cognitive Workload n-back Task, 4 Difficulties",
-  "description": "This multimodal dataset comprises synchronized EEG, ECG, and eye-tracking recordings from 18 participants (of 20 recorded) performing an n-back working memory task with four difficulty levels (1-back through 4-back). Data were collected using a mobile EEG system with 19-channel 10-20 montage, 3-lead ECG, and Pupil Labs Pupil Core eye tracking, all synchronized via Lab Streaming Layer. The dataset includes raw XDF recordings converted to BIDS format with detailed task event annotations, physiological measurements, and participant demographics. Two participants were excluded due to data quality failures. This provides a comprehensive resource for investigating cognitive workload and its neural correlates.",
-  "methods_description": "EEG was recorded from 19 channels (10-20 montage) at 250 Hz using Ag/AgCl electrodes with linked-ear reference. ECG was captured with 3-lead configuration. Pupil Labs Pupil Core eye tracking with infrared illuminators was synchronized via Lab Streaming Layer. The n-back task consisted of a tutorial phase (20 trials per difficulty level with feedback) followed by a main experiment (100 trials per difficulty level without feedback). Each trial presented a letter for 1.0 s followed by a 0.7 s blank interval. Task events were encoded with nback_level, key_press, matched, response_accuracy, and tutorial flags.",
+  "description": "This multimodal dataset comprises synchronized EEG, ECG, and pupillometry recordings from 18 participants performing an n-back working memory task with four difficulty levels (1-back through 4-back). The study employed a combined mobile EEG+ECG system and Pupil Labs eye tracker synchronized via Lab Streaming Layer, capturing cognitive workload modulation across task difficulty. Raw XDF recordings were converted to BIDS format with EEG in BrainVision format, pupil data exported as TSV files, and task events aligned to EEG start time. The dataset includes 19-channel EEG at 250 Hz, 3-lead ECG, and asynchronous pupil tracking, with detailed task event annotations and participant exclusion metadata.",
+  "methods_description": "Data were collected using a combined EEG+ECG mobile system (19-channel 10-20 montage, Ag/AgCl electrodes, linked-ear reference, 250 Hz sampling) and Pupil Labs Pupil Core eye tracker, synchronized via Lab Streaming Layer. The n-back protocol included a tutorial phase (20 trials per difficulty level with feedback) followed by a main experiment (100 trials per level without feedback). Each trial presented a letter for 1.0 s followed by a 0.7 s blank interval. Original recordings in XDF format were converted to BIDS with EEG in BrainVision format, pupil data exported as TSV files, and task events aligned to EEG start time.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -24,19 +24,25 @@
       "term": "cognitive workload"
     },
     {
+      "term": "pupillometry"
+    },
+    {
+      "term": "electrocardiography"
+    },
+    {
       "term": "eye tracking"
     },
     {
-      "term": "ECG"
+      "term": "multimodal"
     },
     {
-      "term": "multimodal neuroimaging"
+      "term": "BIDS"
     },
     {
-      "term": "Lab Streaming Layer"
+      "term": "task difficulty"
     },
     {
-      "term": "physiological signals"
+      "term": "synchronization"
     }
   ],
   "related_identifiers": [
