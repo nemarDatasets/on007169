@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.on007169-blue)](https://doi.org/10.82901/nemar.on007169)
+
 This dataset was generated from LSL/XDF recordings. Converted to BIDS with instructions and code [presented here](https://github.com/LMBooth/QT-nback_study/tree/main/conversion_package)
 
 - Original recordings are stored under sourcedata/xdf/ as .xdf files (non-BIDS).
