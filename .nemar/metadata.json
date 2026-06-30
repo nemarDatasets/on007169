@@ -1,28 +1,96 @@
 {
   "version": "2.0",
-  "dataset_id": "on007169",
-  "source": "openneuro",
-  "source_id": "ds007169",
+  "pipeline_stage": "enriched",
   "title": "Multimodal Cognitive Workload n-back Task, 4 Difficulties",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
     "Matthew Barras": {},
     "Liam Booth": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds007169.v1.0.5",
       "identifier_type": "DOI",
       "relation_type": "IsIdenticalTo"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on007169",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on007169",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.18112/openneuro.ds007169",
+      "identifier_type": "DOI",
+      "relation_type": "IsVersionOf"
+    },
+    {
+      "identifier": "10.21105/joss.01896",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.1038/s41597-019-0104-8",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
     }
   ],
-  "pipeline_stage": "seeded",
-  "bids_version": "1.9.0",
-  "recording_modality": [
+  "resource_type_general": "Dataset",
+  "modalities": [
     "eeg"
   ],
-  "datatypes": [
-    "eeg"
-  ]
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "0.0 KB (1 files)"
+  ],
+  "formats": [
+    ".eeg",
+    ".json",
+    ".md",
+    ".tsv",
+    ".vhdr",
+    ".vmrk",
+    ".xdf",
+    ".yml"
+  ],
+  "description": "This multimodal dataset comprises synchronized EEG, electrocardiography (ECG), and eye-tracking data collected during an n-back working memory task with four difficulty levels. Eighteen participants (2 of 20 recorded participants excluded due to data quality failures) completed a tutorial phase followed by a main experiment involving letter-matching trials at 1-back through 4-back levels. The dataset includes raw physiological recordings acquired via a mobile EEG system and Pupil Labs eye tracker, with comprehensive event annotations and participant metadata.",
+  "methods_description": "Data were collected using a combined mobile EEG+ECG system (19-channel 10-20 montage, 250 Hz sampling rate, Ag/AgCl electrodes with linked-ear reference) and Pupil Labs Pupil Core eye tracker, synchronized via Lab Streaming Layer (LSL). The n-back task protocol included a tutorial phase (20 trials per difficulty level with feedback) and main experiment (100 trials per level without feedback), with each trial presenting a letter for 1.0 s followed by a 0.7 s blank interval. Task events and acquisition markers were extracted from LSL streams and aligned to EEG start times.",
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "working memory"
+    },
+    {
+      "term": "n-back task"
+    },
+    {
+      "term": "cognitive workload"
+    },
+    {
+      "term": "eye tracking"
+    },
+    {
+      "term": "electrocardiography"
+    },
+    {
+      "term": "multimodal neuroimaging"
+    },
+    {
+      "term": "Lab Streaming Layer"
+    },
+    {
+      "term": "mobile EEG"
+    },
+    {
+      "term": "BrainVision"
+    }
+  ],
+  "source_hash": "52ea7e39429b714e7f0ca8ca73aa14ed0fa17c0740b78d9b118ec4d83fc77e5a"
 }
