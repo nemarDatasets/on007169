@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "enriched",
+  "pipeline_stage": "validated",
   "title": "Multimodal Cognitive Workload n-back Task, 4 Difficulties",
-  "description": "This multimodal dataset comprises synchronized EEG, ECG, and pupillometry recordings from 18 participants performing an n-back working memory task with four difficulty levels (1-back through 4-back). The study employed a combined mobile EEG+ECG system and Pupil Labs eye tracker synchronized via Lab Streaming Layer, capturing cognitive workload modulation across task difficulty. Raw XDF recordings were converted to BIDS format with EEG in BrainVision format, pupil data exported as TSV files, and task events aligned to EEG start time. The dataset includes 19-channel EEG at 250 Hz, 3-lead ECG, and asynchronous pupil tracking, with detailed task event annotations and participant exclusion metadata.",
-  "methods_description": "Data were collected using a combined EEG+ECG mobile system (19-channel 10-20 montage, Ag/AgCl electrodes, linked-ear reference, 250 Hz sampling) and Pupil Labs Pupil Core eye tracker, synchronized via Lab Streaming Layer. The n-back protocol included a tutorial phase (20 trials per difficulty level with feedback) followed by a main experiment (100 trials per level without feedback). Each trial presented a letter for 1.0 s followed by a 0.7 s blank interval. Original recordings in XDF format were converted to BIDS with EEG in BrainVision format, pupil data exported as TSV files, and task events aligned to EEG start time.",
+  "description": "This multimodal dataset comprises EEG, ECG, and pupillometry recordings from participants performing an n-back working memory task at four difficulty levels (1-back through 4-back). Data were collected using a combined mobile EEG+ECG system synchronized with a Pupil Labs eye tracker via Lab Streaming Layer, and converted from raw XDF recordings into BIDS format. The dataset is intended to support research on cognitive workload assessment across multiple physiological modalities.",
+  "methods_description": "EEG was recorded with a 19-channel 10-20 montage using Ag/AgCl electrodes with linked-ear reference at 250 Hz, with impedance checks and Neurogel applied. ECG was recorded via a 3-lead configuration on the same mobile system. Pupillometry data were collected using a Pupil Labs Pupil Core eye tracker with infrared illuminators, relayed asynchronously via LSL. The n-back task included a tutorial phase with feedback (20 trials per level) and a main experiment (100 trials per level) without feedback, with each trial presenting a letter for 1.0 s followed by a 0.7 s blank interval.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -15,7 +15,12 @@
       "term": "EEG"
     },
     {
-      "term": "working memory"
+      "term": "Electrocardiography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004562"
+    },
+    {
+      "term": "pupillometry"
     },
     {
       "term": "n-back task"
@@ -24,25 +29,10 @@
       "term": "cognitive workload"
     },
     {
-      "term": "pupillometry"
+      "term": "working memory"
     },
     {
-      "term": "electrocardiography"
-    },
-    {
-      "term": "eye tracking"
-    },
-    {
-      "term": "multimodal"
-    },
-    {
-      "term": "BIDS"
-    },
-    {
-      "term": "task difficulty"
-    },
-    {
-      "term": "synchronization"
+      "term": "multimodal recording"
     }
   ],
   "related_identifiers": [
@@ -64,17 +54,27 @@
     {
       "identifier": "10.21105/joss.01896",
       "identifier_type": "DOI",
-      "relation_type": "IsDescribedBy"
+      "relation_type": "References"
     },
     {
       "identifier": "10.1038/s41597-019-0104-8",
       "identifier_type": "DOI",
-      "relation_type": "IsDescribedBy"
+      "relation_type": "References"
     },
     {
       "identifier": "10.18112/openneuro.ds007169.v1.0.5",
       "identifier_type": "DOI",
       "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.1049/htl.2015.0037",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "10.1109/ACCESS.2021.3079992",
+      "identifier_type": "DOI",
+      "relation_type": "References"
     }
   ],
   "resource_type_general": "Dataset",
