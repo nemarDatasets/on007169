@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Multimodal Cognitive Workload n-back Task, 4 Difficulties",
-  "description": "This multimodal dataset comprises EEG, ECG, and pupillometry recordings from participants performing an n-back working memory task at four difficulty levels (1-back through 4-back). Data were collected using a combined mobile EEG+ECG system synchronized with a Pupil Labs eye tracker via Lab Streaming Layer, and converted from raw XDF recordings into BIDS format. The dataset is intended to support research on cognitive workload assessment across multiple physiological modalities.",
-  "methods_description": "EEG was recorded with a 19-channel 10-20 montage using Ag/AgCl electrodes with linked-ear reference at 250 Hz, with impedance checks and Neurogel applied. ECG was recorded via a 3-lead configuration on the same mobile system. Pupillometry data were collected using a Pupil Labs Pupil Core eye tracker with infrared illuminators, relayed asynchronously via LSL. The n-back task included a tutorial phase with feedback (20 trials per level) and a main experiment (100 trials per level) without feedback, with each trial presenting a letter for 1.0 s followed by a 0.7 s blank interval.",
+  "description": "This dataset contains multimodal recordings from an n-back cognitive workload task with four difficulty levels (1-back to 4-back). It includes 19-channel mobile EEG, ECG, and Pupil Labs eye-tracking and pupillometry data, synchronized with Lab Streaming Layer. Twenty participants were recorded and 18 are released, with two excluded for data quality failures. The data were converted from XDF to BIDS.",
+  "methods_description": "EEG was recorded with a combined EEG+ECG mobile system using a 19-channel 10-20 montage, Ag/AgCl electrodes, a linked-ear reference and 250 Hz sampling. ECG used 3 leads on the same system. Pupil Labs Pupil Core captured pupillometry, and all streams were synchronized via LSL. The protocol had a tutorial phase with feedback (20 trials per level) and a main experiment of 100 trials per level (1-back to 4-back) without feedback. Each letter was shown for 1.0 s followed by a 0.7 s blank interval.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -15,9 +15,10 @@
       "term": "EEG"
     },
     {
-      "term": "Electrocardiography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004562"
+      "term": "ECG"
+    },
+    {
+      "term": "eye tracking"
     },
     {
       "term": "pupillometry"
@@ -30,9 +31,6 @@
     },
     {
       "term": "working memory"
-    },
-    {
-      "term": "multimodal recording"
     }
   ],
   "related_identifiers": [
@@ -83,7 +81,7 @@
     "eeg"
   ],
   "sizes": [
-    "2.3 GB (109 files)"
+    "2.13 GB (109 files)"
   ],
   "formats": [
     ".eeg",
